@@ -16,6 +16,7 @@ h1, h2, h3, h4, h5, h6, span {
 p {
     line-height: 1.5;
     font-size: 16px;
+    font-weight: 400;
 }
 
 li {
@@ -40,6 +41,25 @@ li {
     margin: 0 auto;
 }
 
+/*Animation*/
+
+@keyframes float {
+    from {
+        bottom: 4px;
+    }
+    to {
+        bottom: 0px;
+    }
+}
+@keyframes wiggle {
+    from {
+        transform: rotate(-40deg);
+    }
+    to {
+        transform: rotate(25deg);
+    }
+}
+
 /*Nav bar*/
 
 nav {
@@ -50,13 +70,14 @@ nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: bisque;
+    background-color: #07d40027;
 }
 
 .name {
     color: #07d400;
     font-weight: 700;
-    font-size: 24px;
+    font-size: 32px;
+    -webkit-text-stroke: .5px #242424;
     margin: 0 12px;
 }
 
@@ -70,6 +91,11 @@ nav {
     color: #242424;
     text-decoration: none;
     font-weight: 700;
+    transition: all 300ms ease;
+}
+
+.nav__link--anchor:hover {
+    color: #686868;
 }
 
 .nav__link--anchor-primary {
@@ -91,19 +117,77 @@ nav {
     display: flex;
     flex-direction: column;
 }
-.about-me__info--container {
+
+.about-me__info {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
+.about-me__info--container {
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: center;
+}
+
 .about-me__picture--mask {
     width: 100px;
     height: 100px;
-    border-radius: 50%;
-    overflow: hidden;
+    margin: 60px 0;
 }
 
 .about-me__picture {
+    width: 100%;
+    border-radius: 50%;
+    transform: scale(1.5);
+    box-shadow: 0 8px 16px gray;
+}
+
+.about-me__info--title {
+    font-size: 36px;
+    margin: 16px 0;
+}
+
+#emoji {
+    display: inline-block;
+    animation: wiggle 2s alternate infinite;
+}
+
+.about-me__info--para {
+    font-size: 18px;
+    margin-bottom: 40px;
+}
+
+.about-me__link {
+    font-size: 50px;
+    color: #242424;
+    text-decoration: none;
+    padding: 0 16px;
+    transition: all 300ms ease;
+}
+
+#linkedin, #envelope {
+    position: relative;
+    animation: float 500ms alternate infinite;
+}
+
+#github, #pdf {
+    position: relative;
+    animation: float 500ms alternate-reverse infinite;
+}
+
+.about-me__link:hover {
+    color: #686868;
+}
+
+.about-me__img--container {
+    flex: 1;
+    margin: 50px 0 0 0;
+}
+
+.about-me__img {
     width: 100%;
 }
