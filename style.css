@@ -22,16 +22,35 @@ li {
     list-style: none;
 }
 
+.text--color {
+    color: #07d400;
+}
+
+.flex {
+    display: flex;
+}
+
+.flex-1 {
+    flex: 1;
+}
+
+.row {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
 /*Nav bar*/
 
 nav {
     height: 100px;
     width: 100%;
-    max-width: 1000px;
+    /*max-width: 1000px;*/
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    background-color: bisque;
 }
 
 .name {
@@ -63,4 +82,28 @@ nav {
 
 .nav__link--anchor-primary:hover {
     background-color: #0f9d58;
+}
+
+/*Intro*/
+
+#about-me {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+.about-me__info--container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.about-me__picture--mask {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.about-me__picture {
+    width: 100%;
 }
