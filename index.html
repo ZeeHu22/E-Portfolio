@@ -1,131 +1,196 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Zeeshan Hussain</title>
-    <link rel="stylesheet" href="./style.css">
-    <script src="https://kit.fontawesome.com/69b72dcb0c.js" crossorigin="anonymous"></script>
-</head>
-<body>
+    <link rel="stylesheet" href="./style.css" />
+    <script
+      src="https://kit.fontawesome.com/69b72dcb0c.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="./index.js" defer></script>
+  </head>
+  <body>
     <section id="about-me">
-        <nav>
-            <div class="name">Software Engineer</div>
-            <ul class="nav__link--list">
-                <li>
-                    <a href="#languages" class="
-                        nav__link--anchor
-                        link__hover-effect
-                        link__hover-effect--black"
-                    >Languages</a>
-                </li>
-                <li>
-                    <a href="#projects" class="
-                        nav__link--anchor
-                        link__hover-effect
-                        link__hover-effect--black"
-                    >Projects</a>
-                </li>
-                <li>
-                    <a href="" class="
-                        nav__link--anchor
-                        link__hover-effect
-                        link__hover-effect--black"
-                    >Cerftifications</a>
-                </li>
-                <li>
-                    <a href="" class="
-                        nav__link--anchor
-                        nav__link--anchor-primary"
-                    >Contact</a>
-                </li>
-            </ul>
-        </nav>
-        <div class="flex-1">
-            <div class="about-me__info row">
-                <div class="about-me__info--container">
-                    <figure class="about-me__picture--mask">
-                        <img src="./thumbnail_431A1853.jpg" class="about-me__picture" alt="Selfie">
-                    </figure>
-                    <h1 class="about-me__info--title">
-                        Hello! This is<br><span class="text--color">Zeeshan Hussain</span><span id="emoji">🛸</span><br>Welcome to my Portfolio!
-                    </h1>
-                    <p class="about-me__info--para">
-                        I am a passionate and driven <span class="text--color">software engineer</span> with a strong desire to learn and grow.
-                         I am excited to leverage my experience in <span class="text--color">front-end</span> and <span class="text--color">back-end</span>
-                          development to contribute to innovative and impactful projects. I am eager to take on new challenges, collaborate with talented teams,
-                           and continue honing my expertise in creating effective software solutions.
-                    </p>
-                    <div class="about-me__links">
-                        <a href="" id="linkedin" class="about-me__link">
-                            <i class="fa-brands fa-linkedin"></i>
-                        </a>
-                        <a href="" id="github" class="about-me__link">
-                            <i class="fa-brands fa-github"></i>
-                        </a>
-                        <a href="" id="envelope" class="about-me__link">
-                            <i class="fa-solid fa-envelope"></i>
-                        </a>
-                        <a href="" id="pdf" class="about-me__link">
-                            <i class="fa-solid fa-file-pdf"></i>
-                        </a>
-                    </div>
-                </div>
-                <figure class="about-me__img--container">
-                    <img src="./undraw_solution_mindset_re_57bf.svg" class="about-me__img" alt="">
-                </figure>
-            </div>
+      <nav>
+        <div class="logo--wrapper">
+          <img id="logo" src="./assets/z-h-logo.png" alt="" />
+          <!--<div class="name">Zeeshan Hussain <span class="text--color">- Software Engineer</span></div>-->
         </div>
+        <ul class="nav__link--list">
+          <li>
+            <a
+              href="#languages"
+              class="nav__link--anchor link__hover-effect link__hover-effect--black"
+              >Languages</a
+            >
+          </li>
+          <li>
+            <a
+              href="#projects"
+              class="nav__link--anchor link__hover-effect link__hover-effect--black"
+              >Projects</a
+            >
+          </li>
+          <li>
+            <a
+              href="#certifications"
+              class="nav__link--anchor link__hover-effect link__hover-effect--black"
+              >Cerftifications</a
+            >
+          </li>
+          <!--<li>
+            <a href="" class="nav__link--anchor nav__link--anchor-primary"
+              >Contact</a
+            >
+          </li>-->
+          <li>
+            <a id="contrast__btn" onclick="toggleContrast()"><i class="fa-solid fa-circle-half-stroke"></i></a>
+          </li>
+        </ul>
+      </nav>
+      <div class="flex-1">
+        <div class="about-me__info row">
+          <div class="about-me__info--container">
+            <figure class="about-me__picture--mask">
+              <img
+                src="./assets/thumbnail_431A1853.jpg"
+                class="about-me__picture"
+                alt="Selfie"
+              />
+            </figure>
+            <h1 class="about-me__info--title">
+              Hello! This is<br /><span id="nameHome"
+                ><span class="text--color">Zeeshan Hussain</span
+                ><span id="emoji">🛸</span></span
+              ><br />Welcome to my Portfolio!
+            </h1>
+            <p class="about-me__info--para">
+              I am a passionate and driven
+              <span class="text--color">software engineer</span> with a strong
+              desire to learn and grow. I am excited to leverage my experience
+              in <span class="text--color">front-end</span> and
+              <span class="text--color">back-end</span>
+              development to contribute to innovative and impactful projects. I
+              am eager to take on new challenges, collaborate with talented
+              teams, and continue honing my expertise in creating effective
+              software solutions.
+            </p>
+            <div class="about-me__links">
+              <a
+                href="https://www.linkedin.com/in/zeeshan-hussain-1a2587246?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3Bsn50osQVTSq1CgfvsnmqWw%3D%3D"
+                id="linkedin"
+                class="about-me__link"
+              >
+                <i class="fa-brands fa-linkedin"></i>
+              </a>
+              <a
+                href="https://github.com/ZeeHu22"
+                id="github"
+                class="about-me__link"
+              >
+                <i class="fa-brands fa-github"></i>
+              </a>
+              <a
+                href="javascript:void(0);"
+                id="envelope"
+                class="about-me__link"
+                data-email="zeeshan.hu@outlook.com"
+                onclick="copyEmailToClipboard()"
+              >
+                <i class="fa-solid fa-envelope"></i>
+              </a>
+              <a
+                href="./assets/Hussain_Zeeshan_Resume (v2).pdf"
+                target="_blank"
+                id="pdf"
+                class="about-me__link"
+              >
+                <i class="fa-solid fa-file-pdf"></i>
+              </a>
+            </div>
+            <div id="custom-alert">Email address copied to clipboard!</div>
+          </div>
+          <figure class="about-me__img--container">
+            <img
+              src="./assets/undraw_solution_mindset_re_57bf.svg"
+              class="about-me__img"
+              alt=""
+            />
+          </figure>
+        </div>
+      </div>
+      <button class="mail__btn click">
+        <i class="fa-solid fa-message"></i>
+      </button>
+      <div class="modal">
+        <div class="modal__half modal__about">
+          <h3 class="modal__title modal__title--about">Here is a bit about me.</h3>
+          <h4 class="modal__sub-title modal__sub-title--about">Software Engineer.</h4>
+          <p class="modal__para">I am a passionate <span class="text--color">software engineer</span> with a strong focus on 
+            <span class="text--color">frontend development</span>, creating intuitive and visually appealing user interfaces. 
+            My expertise extends to <span class="text--color">backend development</span> as well, including Java, Python, and C++, 
+            allowing me to deliver well-rounded solutions.<br><br> 
+            I excel at blending creative design with technical proficiency, ensuring both engaging <span class="text--color">user experiences</span> 
+            and <span class="text--color">optimized performance</span>. I’m excited to bring my unique skill set to a dynamic team where I can 
+            contribute to impactful projects and continue to grow professionally.</p>
+        </div>
+        <div class="modal__half modal__contact">
+          Let's have a chat
+        </div>
+      </div>
     </section>
 
     <section id="languages">
-        <div class="icons">
-            <div class="slider" style="--quantity: 10">
-                <div class="item" style="--position: 1">
-                    <i class="fa-brands fa-html5" style="color: #07d400;"></i>
-                    <span class="label">HTML</span>
-                </div>
-                <div class="item" style="--position: 2">
-                    <i class="fa-brands fa-css3-alt" style="color: #07d400;"></i>
-                    <span class="label">CSS</span>
-                </div>
-                <div class="item" style="--position: 3">
-                    <i class="fa-brands fa-js" style="color: #07d400;"></i>
-                    <span class="label">JavaScript</span>
-                </div>
-                <div class="item" style="--position: 4">
-                    <i class="fa-brands fa-react" style="color: #07d400;"></i>
-                    <span class="label">React</span>
-                </div>
-                <div class="item" style="--position: 5">
-                    <i class="fa-brands fa-git-alt" style="color: #07d400;"></i>
-                    <span class="label">Git</span>
-                </div>
-                <div class="item" style="--position: 6">
-                    <i class="fa-brands fa-python" style="color: #07d400;"></i>
-                    <span class="label">Python</span>
-                </div>
-                <div class="item" style="--position: 7">
-                    <i class="fa-brands fa-java" style="color: #07d400;"></i>
-                    <span class="label">Java</span>
-                </div>
-                <div class="item" style="--position: 8">
-                    <i class="fa-solid fa-database" style="color: #07d400;"></i>
-                    <span class="label">SQL</span>
-                </div>
-                <div class="item" style="--position: 9">
-                    <i class="fa-brands fa-aws" style="color: #07d400;"></i>
-                    <span class="label">AWS</span>
-                </div>
-                <div class="item" style="--position: 10">
-                    <i class="fa-solid fa-code-branch" style="color: #07d400;"></i>
-                    <span class="label">Firebase</span>
-                </div>
-            </div>
-            <div class="model">
-                <h1>My Technology Stack</h1>
-            </div>
+      <div class="icons">
+        <div class="slider" style="--quantity: 10">
+          <div class="item" style="--position: 1">
+            <i class="fa-brands fa-html5" style="color: #07d400"></i>
+            <span class="label">HTML</span>
+          </div>
+          <div class="item" style="--position: 2">
+            <i class="fa-brands fa-css3-alt" style="color: #07d400"></i>
+            <span class="label">CSS</span>
+          </div>
+          <div class="item" style="--position: 3">
+            <i class="fa-brands fa-js" style="color: #07d400"></i>
+            <span class="label">JavaScript</span>
+          </div>
+          <div class="item" style="--position: 4">
+            <i class="fa-brands fa-react" style="color: #07d400"></i>
+            <span class="label">React</span>
+          </div>
+          <div class="item" style="--position: 5">
+            <i class="fa-brands fa-git-alt" style="color: #07d400"></i>
+            <span class="label">Git</span>
+          </div>
+          <div class="item" style="--position: 6">
+            <i class="fa-brands fa-python" style="color: #07d400"></i>
+            <span class="label">Python</span>
+          </div>
+          <div class="item" style="--position: 7">
+            <i class="fa-brands fa-java" style="color: #07d400"></i>
+            <span class="label">Java</span>
+          </div>
+          <div class="item" style="--position: 8">
+            <i class="fa-solid fa-database" style="color: #07d400"></i>
+            <span class="label">SQL</span>
+          </div>
+          <div class="item" style="--position: 9">
+            <i class="fa-brands fa-aws" style="color: #07d400"></i>
+            <span class="label">AWS</span>
+          </div>
+          <div class="item" style="--position: 10">
+            <i class="fa-solid fa-code-branch" style="color: #07d400"></i>
+            <span class="label">Firebase</span>
+          </div>
         </div>
+        <div class="model">
+          <h1>My Technology <span class="text--color">Stack</span></h1>
+          <img src="./assets/undraw_geniuses_9h9g.svg" alt="" />
+        </div>
+      </div>
     </section>
 
     <!--
@@ -145,112 +210,186 @@
     </section>
     -->
 
-
     <section id="projects">
-        <div class="container">
-          <div class="row">
-            <h1 class="section__title">Here are some of my <span class="text--color">projects</span></h1>
-            <ul class="project__list">
-              <li class="project">
-                <div class="project__wrapper">
-                  <img src="./tbd.png" class="project__img" alt="">
-                  <div class="project__description">
-                    <h3 class="project__description--title">Project 1</h3>
-                    <h4 class="project__description--sub-title">
-                      (Project Description)
-                    </h4>
-                    <p class="project__description--para">
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed diam leo, scelerisque sed odio eget,
-                      luctus faucibus augue. Fusce volutpat iaculis dapibus. Lorem ipsum dolor sit amet, consectetur
-                      adipiscing elit. Maecenas id eleifend libero. In hac habitasse platea dictumst.
-                    </p>
-                    <div class="project__description--links">
-                      <a href="https://www.github.com/yourlink" target="_blank" class="project__description--link">
-                        <i class="fab fa-github"></i>
-                      </a>
-                      <a href="https://www.yourwebsite.com" class="project__description--link">
-                        <i class="fas fa-link"></i>
-                      </a>
-                    </div>
+      <div class="container">
+        <div class="row">
+          <h1 class="section__title">
+            Here are some of my <span class="text--color">projects</span>
+          </h1>
+          <ul class="project__list">
+            <li class="project">
+              <div class="project__wrapper">
+                <img
+                  src="./assets/hero-screenshot.png"
+                  class="project__img"
+                  alt=""
+                />
+                <div class="project__description">
+                  <h3 class="project__description--title">Treact Copy</h3>
+                  <h4 class="project__description--sub-title">
+                    (Project Description)
+                  </h4>
+                  <p class="project__description--para">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
+                    diam leo, scelerisque sed odio eget, luctus faucibus augue.
+                    Fusce volutpat iaculis dapibus. Lorem ipsum dolor sit amet,
+                    consectetur adipiscing elit. Maecenas id eleifend libero. In
+                    hac habitasse platea dictumst.
+                  </p>
+                  <div class="project__description--links">
+                    <a
+                      href="https://github.com/ZeeHu22/Treact-Copy"
+                      target="_blank"
+                      class="project__description--link"
+                    >
+                      <i class="fab fa-github"></i>
+                    </a>
+                    <a
+                      href="https://zeehu22.github.io/Treact-Copy/"
+                      class="project__description--link"
+                    >
+                      <i class="fas fa-link"></i>
+                    </a>
                   </div>
                 </div>
-              </li>
-              <li class="project">
-                <div class="project__wrapper">
-                  <img src="./tbd.png" class="project__img" alt="">
-                  <div class="project__description">
-                    <h3 class="project__description--title">Project 2</h3>
-                    <h4 class="project__description--sub-title">
-                        (Project Description)
-                    </h4>
-                    <p class="project__description--para">
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed diam leo, scelerisque sed odio eget,
-                      luctus faucibus augue. Fusce volutpat iaculis dapibus. Lorem ipsum dolor sit amet, consectetur
-                      adipiscing elit. Maecenas id eleifend libero. In hac habitasse platea dictumst.
-                    </p>
-                    <div class="project__description--links">
-                      <a href="https://www.github.com/yourlink" target="_blank" class="project__description--link">
-                        <i class="fab fa-github"></i>
-                      </a>
-                      <a href="https://www.yourwebsite.com" class="project__description--link">
-                        <i class="fas fa-link"></i>
-                      </a>
-                    </div>
+              </div>
+            </li>
+            <li class="project">
+              <div class="project__wrapper">
+                <img
+                  src="./assets/E-commerce_screenshot.png"
+                  class="project__img"
+                  alt=""
+                />
+                <div class="project__description">
+                  <h3 class="project__description--title">Bike Shop</h3>
+                  <h4 class="project__description--sub-title">
+                    (Project Description)
+                  </h4>
+                  <p class="project__description--para">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
+                    diam leo, scelerisque sed odio eget, luctus faucibus augue.
+                    Fusce volutpat iaculis dapibus. Lorem ipsum dolor sit amet,
+                    consectetur adipiscing elit. Maecenas id eleifend libero. In
+                    hac habitasse platea dictumst.
+                  </p>
+                  <div class="project__description--links">
+                    <a
+                      href="https://github.com/ZeeHu22/E-Commerce"
+                      target="_blank"
+                      class="project__description--link"
+                    >
+                      <i class="fab fa-github"></i>
+                    </a>
+                    <a
+                      href="https://zeehu22.github.io/E-Commerce/"
+                      class="project__description--link"
+                    >
+                      <i class="fas fa-link"></i>
+                    </a>
                   </div>
                 </div>
-              </li>
-              <li class="project">
-                <div class="project__wrapper">
-                  <img src="./tbd.png" class="project__img" alt="">
-                  <div class="project__description">
-                    <h3 class="project__description--title">Project 3</h3>
-                    <h4 class="project__description--sub-title">
-                      (Project Description)
-                    </h4>
-                    <p class="project__description--para">
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed diam leo, scelerisque sed odio eget,
-                      luctus faucibus augue. Fusce volutpat iaculis dapibus. Lorem ipsum dolor sit amet, consectetur
-                      adipiscing elit. Maecenas id eleifend libero. In hac habitasse platea dictumst.
-                    </p>
-                    <div class="project__description--links">
-                      <a href="https://www.github.com/yourlink" target="_blank" class="project__description--link">
-                        <i class="fab fa-github"></i>
-                      </a>
-                      <a href="https://www.yourwebsite.com" class="project__description--link">
-                        <i class="fas fa-link"></i>
-                      </a>
-                    </div>
+              </div>
+            </li>
+            <li class="project">
+              <div class="project__wrapper">
+                <img src="./assets/tbd.png" class="project__img" alt="" />
+                <div class="project__description">
+                  <h3 class="project__description--title">Project 3</h3>
+                  <h4 class="project__description--sub-title">
+                    (Project Description)
+                  </h4>
+                  <p class="project__description--para">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
+                    diam leo, scelerisque sed odio eget, luctus faucibus augue.
+                    Fusce volutpat iaculis dapibus. Lorem ipsum dolor sit amet,
+                    consectetur adipiscing elit. Maecenas id eleifend libero. In
+                    hac habitasse platea dictumst.
+                  </p>
+                  <div class="project__description--links">
+                    <a
+                      href="https://www.github.com/yourlink"
+                      target="_blank"
+                      class="project__description--link"
+                    >
+                      <i class="fab fa-github"></i>
+                    </a>
+                    <a
+                      href="https://www.yourwebsite.com"
+                      class="project__description--link"
+                    >
+                      <i class="fas fa-link"></i>
+                    </a>
                   </div>
                 </div>
-              </li>
-            </ul>
-          </div>
+              </div>
+            </li>
+          </ul>
         </div>
-      </section>
+      </div>
+    </section>
 
-
-      <section id="certifications">
-        <div class="certification__container">
-            <div class="row">
-                <h1 class="section__title">
-                    Here are my <span class="text--color">certifications</span>
-                </h1>
-                <ul class="certifications__list">
-                    <li>
-                        <div class="certification__wrapper">
-                            <img src="./AWS-Certified-Solutions-Architect-Associate.png" class="certification__img">
-                        </div>
-                    </li>
-                    <li>
-                        <div class="certification__wrapper">
-                            <img src="./CompTIA_Security.png" class="certification__img">
-                        </div>
-                    </li>
-                </ul>
-            </div>
+    <section id="certifications">
+      <div class="certification__container">
+        <div class="row">
+          <h1 class="section__title">
+            Here are my <span class="text--color">certifications</span>
+          </h1>
+          <ul class="certifications__list">
+            <li>
+              <div class="certification__wrapper">
+                <img
+                  src="./assets/AWS-Certified-Solutions-Architect-Associate.png"
+                  class="certification__img"
+                />
+              </div>
+            </li>
+            <li>
+              <div class="certification__wrapper">
+                <img
+                  src="./assets/CompTIA_Security.png"
+                  class="certification__img"
+                />
+              </div>
+            </li>
+          </ul>
         </div>
-      </section>
+      </div>
+    </section>
 
-
-</body>
+    <footer>
+      <div class="container">
+        <figure>
+          <img src="./assets/z-h-logo.png" class="footer__logo--img" alt="">
+        </figure>
+        <div class="footer__social--list">
+          <a
+            href="https://www.linkedin.com/in/zeeshan-hussain-1a2587246?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3Bsn50osQVTSq1CgfvsnmqWw%3D%3D"
+            class="footer__social--link"
+          >
+            Linkedin
+          </a>
+          <a href="https://github.com/ZeeHu22" class="footer__social--link">
+            Github
+          </a>
+          <a
+            href="javascript:void(0);"
+            class="footer__social--link"
+            data-email="zeeshan.hu@outlook.com"
+            onclick="copyEmailToClipboard()"
+          >
+            Email
+          </a>
+          <a
+            href="./assets/Hussain_Zeeshan_Resume (v2).pdf"
+            target="_blank"
+            class="footer__social--link"
+          >
+            Resume
+          </a>
+        </div>
+        <div class="footer__copyright">Copyright © 2024 Zeeshan Hussain</div>
+      </div>
+    </footer>
+  </body>
 </html>
