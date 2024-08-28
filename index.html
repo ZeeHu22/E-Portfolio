@@ -10,8 +10,18 @@
       crossorigin="anonymous"
     ></script>
     <script src="./index.js" defer></script>
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+</script>
+<script type="text/javascript">
+   (function(){
+      emailjs.init({
+        publicKey: "Z3SkQxg_ht0haJhhv",
+      });
+   })();
+</script>
   </head>
-  <body>
+  <body onmousemove="moveShapes(event)">
     <section id="about-me">
       <nav>
         <div class="logo--wrapper">
@@ -72,10 +82,8 @@
               desire to learn and grow. I am excited to leverage my experience
               in <span class="text--color">front-end</span> and
               <span class="text--color">back-end</span>
-              development to contribute to innovative and impactful projects. I
-              am eager to take on new challenges, collaborate with talented
-              teams, and continue honing my expertise in creating effective
-              software solutions.
+              development to contribute to innovative and impactful projects.
+              <div class="about-me__click">Here is a bit more <b class="text--color click" onclick="toggleModal()">about me.</b></div>
             </p>
             <div class="about-me__links">
               <a
@@ -121,7 +129,7 @@
           </figure>
         </div>
       </div>
-      <button class="mail__btn click">
+      <button class="mail__btn click" onclick="toggleModal()">
         <i class="fa-solid fa-message"></i>
       </button>
       <div class="modal">
@@ -137,9 +145,44 @@
             contribute to impactful projects and continue to grow professionally.</p>
         </div>
         <div class="modal__half modal__contact">
-          Let's have a chat
+          <i class="fas fa-times modal__exit click" onclick="toggleModal()"></i>
+          <h3 class="modal__title modal__title--contact">Let us have a chat.</h3>
+          <h4 class="modal__sub-title modal__sub-title__contact">I am currently open for new opportunities.</h4>
+          <form id="contact__form" onsubmit="contact(event)">
+            <div class="form__item">
+              <label class="form__item--label">Name</label>
+              <input class="input" name="user_name" type="text" required></input>
+            </div>
+            <div class="form__item">
+              <label class="form__item--label">E-mail</label>
+              <input class="input" name="user_email" type="email" required></input>
+            </div>
+            <div class="form__item">
+              <label class="form__item--label">Message</label>
+              <textarea class="input" name="user_message" type="text" required></textarea>
+            </div>
+            <button id="contact__submit" class="form__submit">
+              Send it my way!
+            </button>
+          </form>
+          <div class="modal__overlay modal__overlay--loading">
+            <i class="fas fa-spinner"></i>
+          </div>
+          <div class="modal__overlay modal__overlay--success">
+            Thank you for the message.<br><br>Looking forward to speaking to you!
+          </div>
         </div>
       </div>
+      <i class="fa-solid fa-terminal shape shape--0"></i>
+      <i class="fa-regular fa-file-code shape shape--1"></i>
+      <i class="fa-solid fa-code shape shape--2"></i>
+      <i class="fa-solid fa-gears shape shape--3"></i>
+      <i class="fa-solid fa-code-merge shape shape--4"></i>
+      <i class="fa-solid fa-network-wired shape shape--5"></i>
+      <i class="fa-solid fa-microchip shape shape--6"></i>
+      <i class="fa-solid fa-laptop-code shape shape--7"></i>
+      <i class="fa-solid fa-bug-slash shape shape--8"></i>
+      <i class=""></i>
     </section>
 
     <section id="languages">
