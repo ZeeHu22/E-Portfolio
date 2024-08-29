@@ -18,6 +18,11 @@ function moveShapes(event) {
     }
 }
 
+function toggleMenu() {
+    const navList = document.querySelector('.nav__link--list');
+    navList.classList.toggle('show');
+  }  
+
 function toggleContrast() {
     contrastToggle = !contrastToggle;
     if (contrastToggle) {
