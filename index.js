@@ -46,7 +46,7 @@ function copyEmailToClipboard() {
     customAlert.classList.add('show');
     setTimeout(function() {
         customAlert.classList.remove('show');
-    }, 3000); // Hide the alert after 3 seconds
+    }, 3000);
 }
 
 function contact(event){
