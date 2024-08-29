@@ -9,7 +9,7 @@
 }
 
 html {
-    scroll-behavior: smooth;
+  scroll-behavior: smooth;
 }
 
 h1,
@@ -988,8 +988,8 @@ footer figure {
 } */
 
 .dark-theme .item i {
-    -webkit-text-stroke: .5px #e0e0e0;
-  }
+  -webkit-text-stroke: 0.5px #e0e0e0;
+}
 
 .dark-theme #logo,
 .dark-theme .footer__logo--img {
@@ -1108,8 +1108,8 @@ footer figure {
   .modal__half {
     width: 100%;
   }
-  
-    .flex,
+
+  .flex,
   .nav__link--list,
   .about-me__info,
   .project__wrapper {
@@ -1165,26 +1165,46 @@ footer figure {
 }
 
 @media (max-width: 480px) {
-    .project__description--para {
-        display: none;
-    }
+  .project__description--para {
+    display: none;
+  }
 
-    .project__description {
-        left: 8px;
-        padding: 0;
-        width: 100%;
-        text-align: center;
-    }
+  .project__description {
+    left: 8px;
+    padding: 0;
+    width: 100%;
+    text-align: center;
+  }
 
-    .project__description--sub-title {
-        margin-bottom: 8px;
-    }
+  .project__description--sub-title {
+    margin-bottom: 8px;
+  }
 
-    .modal__half {
-        padding: 40px;
-    }
+  .modal__half {
+    padding: 40px;
+  }
 
-    .modal__para {
-        font-size: 12px;
-    }
+  .modal__title {
+    font-size: 16px;
+  }
+
+  .modal__sub-title {
+    margin: 6px 0 12px 0;
+    font-size: 12px;
+  }
+
+  input,
+  textarea {
+    height: 30px;
+  }
+
+  textarea {
+    resize: vertical;
+    height: 60px;
+    margin-top: 8px;
+  }
+
+  .modal__para {
+    font-size: 12px;
+  }
 }
