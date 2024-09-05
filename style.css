@@ -122,7 +122,7 @@ footer {
 
 /*Animation*/
 
-@keyframes float {
+/* @keyframes float {
   from {
     bottom: 4px;
   }
@@ -137,7 +137,7 @@ footer {
   to {
     transform: rotate(25deg);
   }
-}
+} */
 
 /*Nav bar*/
 
@@ -318,22 +318,44 @@ nav {
 .about-me__click {
   font-size: 28px;
   font-weight: 400;
-  margin-bottom: 32px;
+  padding: 6px 12px;
+  margin: 32px 0;
+  background-color: transparent;
+  border: 2px solid #07d400;
+  border-radius: 50px;
+  color: #07d400;
+  cursor: pointer;
+  transition: all 0.3s ease;
 }
 
-.about-me__click b {
-  text-decoration: underline;
+.about-me__click:hover {
+  color: #ffffff;
+  background-color: #07d400;
+  transform: scale(1.1);
+}
+
+.about-me__links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 30px;
+  gap: 32px;
 }
 
 .about-me__link {
-  font-size: 50px;
-  color: #242424;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #07d400;
+  border: 2px solid #07d400;
+  border-radius: 50%;
   text-decoration: none;
-  padding: 0 16px;
-  transition: font-size 300ms ease;
+  transition: all 300ms ease;
 }
 
-#linkedin,
+/* #linkedin,
 #envelope {
   position: relative;
   animation: float 500ms alternate infinite;
@@ -343,11 +365,12 @@ nav {
 #pdf {
   position: relative;
   animation: float 500ms alternate-reverse infinite;
-}
+} */
 
 .about-me__link:hover {
-  color: #bdbdbd;
-  font-size: 70px;
+  color: #ffffff;
+  background-color: #07d400;
+  transform: scale(1.2);
 }
 
 .about-me__img--container {
@@ -1010,13 +1033,13 @@ footer figure {
   background-color: #242424;
 }
 
-.dark-theme .about-me__link {
+/* .dark-theme .about-me__link {
   color: #e0e0e0;
 }
 
 .dark-theme .about-me__link:hover {
   color: #8a8a8a;
-}
+} */
 
 .dark-theme .project__wrapper:before {
   background-color: #333;
